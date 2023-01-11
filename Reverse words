@@ -1,0 +1,21 @@
+#Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+def flippy_flop(input): #filps a string
+  input = [*input] #splits string into a list
+  input.reverse() #reverses the list
+  input = ''.join(input) #makes list into a string
+  return(input)
+  
+def reverse_words(text):
+  list = [*text] #split the string into a list char by char
+  word = ''
+  final = ''
+  for i in list: #iterate through the listed string
+    if i == ' ': #testing for space
+      final += flippy_flop(word) + ' ' #if there is a space it recognizes that there is a word, it will add that word then add a space after it
+      word = '' #resets the word variable
+    else:  
+      word += i # if no space then continue to create a word
+  final += flippy_flop(word) #adds the last word to final
+  return(final)
+print(reverse_words("apple  bannana"))
