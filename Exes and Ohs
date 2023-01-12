@@ -1,0 +1,6 @@
+#Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+def xo(s):
+    return [*(s.lower())].count("x") == [*(s.lower())].count("o")
+    #since the x's and o's can be capital or lower, lowercase them all, then test to see if the amount is equal
+    #did not need to split the strings into lists, did not know count worked for strings
+print(xo("xxXxoOoo"))
