@@ -1,0 +1,6 @@
+#Given a list and a number, create a new list that contains each number of list at most N times, without reordering.
+
+def delete_nth(order,max_e): 
+  return [item for i, item in enumerate(order) if order[:i].count(item) < max_e]
+  # iterates through order, counts the amount of "item" before its index returns list of items with less then max_e number of duplicates before it
+print(delete_nth([1,1,3,3,7,2,2,2,2], 3))
