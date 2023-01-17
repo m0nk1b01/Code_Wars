@@ -1,0 +1,14 @@
+def solution(s):
+  print([*s])
+  return ''.join([" " + i if i.isupper() else i for i in s])# I did not know I could put an in if before a for loop like that
+
+  ''' #what i submitted
+    final = ''
+    for i, item in enumerate([*s]): #enumerate the listed string
+      if item.isupper(): #test for each letters case
+        final += " " + item #add a space before each upper case
+      else:
+        final += item #put the lower case back in the string
+    return final
+  '''
+print(solution('camelCasingCCCCcCCcC'))
