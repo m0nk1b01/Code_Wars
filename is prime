@@ -1,0 +1,30 @@
+def is_prime(num):
+  if num <= 1:return False
+  #if num**.5 - int(num**.5):return False 
+  known_prime = [2, 3, 5, 7]
+  for i in range(7,int(num**.5)+1):#Loop through every number from 7 to the sqrt of the number being tested because 
+    test = 0
+    for y in known_prime:
+      if i % y == 0 and i != y:
+        test = 1
+        break
+    if test == 1:
+      pass
+    else:
+      known_prime.append(i)
+      if num in known_prime:
+        return True
+  
+      if num % i == 0 & i != num:
+        return False
+  return True        
+'''
+  for i in known_prime:
+    if num % i == 0 & i != num:
+      return False
+  return True
+'''
+
+
+print(is_prime(51))
+#print(1%2)
